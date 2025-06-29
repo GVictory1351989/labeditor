@@ -5,13 +5,12 @@ import ReportFooter from './components/ReportFooter';
 
 function App() {
     return (
-        <div className="flex flex-col min-h-screen bg-white text-black max-w-3xl mx-auto shadow-md">
-            <div className="flex-grow p-4">
+        <div className="page-wrapper">
+            <div className="page-content">
                 <Header />
                 <PatientInfo />
                 <BiochemistryReport />
             </div>
-
             <ReportFooter />
         </div>
     );

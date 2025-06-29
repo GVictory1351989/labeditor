@@ -1,0 +1,47 @@
+/* App.css or global CSS file */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: sans-serif;
+    background-color: white;
+    color: black;
+}
+
+/* Main layout wrapper */
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* full viewport height */
+}
+
+/* Main content grows to fill available space */
+.page-content {
+    flex: 1;
+    padding: 16px;
+}
+
+/* Optional: style footer */
+.report-footer {
+    padding: 20px;
+    background-color: #1e3a8a;
+    color: white;
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .page-content {
+        padding: 12px;
+    }
+
+    .patient-info-wrapper,
+    .report-container {
+        width: 100%;
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .footer-disclaimer {
+        font-size: 13px;
+    }
+}

@@ -1,6 +1,6 @@
 ﻿.report-footer {
     position: relative;
-    margin-top: 100px;
+    margin-top: auto;
     padding-bottom: 60px; /* space for signature box */
 }
 
@@ -46,10 +46,13 @@
 
 .footer-disclaimer {
     color: white;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 600; /* ⬅️ Thoda aur bold */
     text-align: center;
+    letter-spacing: 0.5px; /* ⬅️ (Optional) Thoda spacing better look ke liye */
+    /*text-transform: uppercase;*/ /* ⬅️ (Optional) Professional uppercase look */
 }
+
 /* ✅ Force print background */
 @media print {
     .footer-line {
