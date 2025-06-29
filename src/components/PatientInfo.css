@@ -1,0 +1,77 @@
+﻿.patient-info-wrapper {
+    max-width: 650px; /* Narrower layout */
+    margin-top: 0.75rem;
+    margin-left: 1.5rem; /* 👈 Left aligned */
+    padding: 1.5rem;
+    background: linear-gradient(to bottom right, #f5f3ff, #eff6ff);
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+.patient-info-heading {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #6b21a8;
+    border-bottom: 2px solid #d8b4fe;
+    padding-bottom: 0.25rem;
+    margin-bottom: 1.2rem;
+}
+
+.input-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.input-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.3rem;
+}
+
+.mt {
+    margin-top: 1rem;
+}
+
+.input-field,
+.input-area {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.6rem;
+    background-color: #fff;
+    color: #111827;
+    transition: 0.2s ease-in-out;
+}
+
+    .input-field:focus,
+    .input-area:focus {
+        outline: none;
+        border-color: #a78bfa;
+        box-shadow: 0 0 0 2px rgba(167, 139, 250, 0.3);
+    }
+
+.input-area {
+    resize: none;
+    min-height: 110px;
+}
+
+.doctor-ref {
+    text-align: left;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    font-weight: 600;
+    color: #6b21a8;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 0.75rem;
+}
+
+    .doctor-ref span {
+        color: #4b5563;
+    }

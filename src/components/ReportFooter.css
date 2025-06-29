@@ -1,0 +1,80 @@
+﻿.report-footer {
+    position: relative;
+    margin-top: 100px;
+    padding-bottom: 60px; /* space for signature box */
+}
+
+/* Bottom-right: image + name + title */
+.footer-signature-box {
+    position: absolute;
+    bottom: 40px;
+    right: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 4px;
+}
+
+.footer-image {
+    max-width: 80px;
+    max-height: 80px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.footer-name {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.footer-title {
+    font-size: 12px;
+    color: #475569;
+}
+
+/* Full-width blue rectangle line */
+.footer-line {
+    height: 20px;
+    background-color: #1e40af;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-disclaimer {
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+/* ✅ Force print background */
+@media print {
+    .footer-line {
+        background-color: #000080 !important; /* Strong dark blue */
+        -webkit-print-color-adjust: exact !important; /* For Chrome/Safari */
+        print-color-adjust: exact !important; /* For Firefox */
+        box-shadow: none !important;
+    }
+
+    .footer-disclaimer {
+        color: white !important;
+    }
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* 🧱 Full viewport height */
+}
+
+.page-content {
+    flex: 1; /* 📦 This grows to take all remaining space */
+}

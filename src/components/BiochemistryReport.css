@@ -1,0 +1,179 @@
+﻿/* Container */
+.report-container {
+    max-width: 650px; /* 🔽 Chhota kar diya */
+    margin: 32px auto; /* ✅ Center of page */
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+
+/* Header */
+.report-header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.report-line {
+    height: 4px;
+    background-color: #60a5fa;
+    margin-bottom: 10px;
+}
+
+.report-title {
+    font-size: 1.0rem; /* 🔽 Smaller font (approx 19.2px) */
+    font-weight: 400;
+    color: #1e3a8a;
+    margin-bottom: 0.25rem; /* 🔽 Less spacing below */
+    line-height: 1.2;
+}
+
+/* Table Header */
+.table-header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px; /* ⬅️ Column gap added */
+    font-weight: 600;
+    background: #eff6ff;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    color: #374151;
+}
+
+/* Table Rows */
+.table-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px; /* Column gap here */
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px; /* ⬅️ Gap between columns */
+}
+
+/* Input Styling */
+.table-input {
+    width: 20%; /* ✅ Add this */
+    padding: 8px 30px;
+    height: 5px;
+    font-size: 0.85rem;
+    text-align: center;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    transition: 0.2s ease-in-out;
+}
+
+
+    .table-input:focus {
+        border-color: #60a5fa;
+        box-shadow: 0 0 0 2px rgba(96,165,250,0.3);
+    }
+
+/* Color Styles */
+.red-bg {
+    background-color: #fecaca;
+}
+
+.green-bg {
+    background-color: #bbf7d0;
+}
+
+/* Action Bar */
+.action-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 32px;
+    align-items: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 12px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9rem;
+    border: none;
+    transition: 0.3s ease;
+}
+
+.btn-green {
+    background-color: #16a34a;
+}
+
+    .btn-green:hover {
+        background-color: #15803d;
+    }
+
+.btn-red {
+    background-color: #dc2626;
+}
+
+    .btn-red:hover {
+        background-color: #b91c1c;
+    }
+
+.btn-blue {
+    background-color: #2563eb;
+}
+
+    .btn-blue:hover {
+        background-color: #1d4ed8;
+    }
+
+.color-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.color-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    outline: none;
+}
+
+    .color-btn.white {
+        background-color: white;
+    }
+
+    .color-btn.red {
+        background-color: #f87171;
+    }
+
+    .color-btn.green {
+        background-color: #34d399;
+    }
+
+/* Print Styles */
+@media print {
+    .no-print {
+        display: none;
+    }
+
+    .report-container {
+        box-shadow: none;
+        padding: 0;
+    }
+
+    .red-bg {
+        background-color: #fecaca !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .green-bg {
+        background-color: #bbf7d0 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
