@@ -32,3 +32,9 @@ yarn-error.log*
 
 # optional: output folder
 /output
+node_modules
+dist
+.vscode
+.env
+.DS_Store
+npm-debug.log*
