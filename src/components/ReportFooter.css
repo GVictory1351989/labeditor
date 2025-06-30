@@ -4,45 +4,47 @@
     padding: 0;
 }
 
-/* ✅ Overall container for print layout */
+/* ✅ Overall container for layout */
 .page-container {
     display: flex;
     flex-direction: column;
-    min-height: 95vh; /* 🔽 Thoda reduce kiya to help fit in one page */
+    min-height: 95vh; /* 🔽 Slightly reduced to help fit in one page */
     page-break-inside: auto;
-    padding-top: 8px; /* 🔽 Layout slightly shifted up */
+    padding-top: 8px;
     padding-bottom: 0;
     margin: 0;
 }
 
-/* ✅ Content expands to fill available space */
+/* ✅ Content area that grows */
 .page-content {
     flex: 1;
     padding: 0;
     margin: 0;
 }
 
-/* ✅ Footer container that won't break */
+/* ✅ Footer container that includes signature and line */
 .report-footer {
     position: relative;
-    padding-bottom: 0;
+    padding-bottom: 80px; /* 🔽 Extra space for absolute signature */
     margin-top: auto;
     page-break-inside: avoid;
     break-inside: avoid;
-    page-break-before: auto;
-    break-before: auto;
 }
 
-/* ✅ Signature block - stays with footer */
+/* ✅ Signature box – locked to bottom-right */
 .footer-signature-box {
+    position: absolute;
+    bottom: 40px;
+    right: 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 4px;
-    margin-bottom: 16px; /* 🔽 Use margin instead of absolute position */
+    page-break-inside: avoid;
 }
 
+/* ✅ Signature image settings */
 .footer-image {
     max-width: 80px;
     max-height: 80px;
@@ -51,6 +53,7 @@
     object-fit: contain;
 }
 
+/* ✅ Name and title under signature */
 .footer-name {
     font-weight: 600;
     font-size: 14px;
@@ -61,7 +64,7 @@
     color: #475569;
 }
 
-/* ✅ Footer line with disclaimer */
+/* ✅ Full-width footer line (disclaimer) */
 .footer-line {
     margin-top: 16px;
     height: 20px;
@@ -82,10 +85,10 @@
     letter-spacing: 0.5px;
 }
 
-/* ✅ Print-specific rules */
+/* ✅ Print-specific settings */
 @media print {
     html, body {
-        zoom: 0.94; /* 🔽 Shrinks layout to fit 1-page */
+        zoom: 0.94; /* 🔍 Slightly scale down to fit everything in 1 page */
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
     }
