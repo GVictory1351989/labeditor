@@ -1,20 +1,49 @@
-﻿.report-footer {
-    position: relative;
-    margin-top: auto;
-    padding-bottom: 0px; /* space for signature box */
-    page-break-inside: avoid; /* 👈 Prevent page break inside footer */
+﻿html, body {
+    height: auto;
+    margin: 0;
+    padding: 0;
 }
 
-/* Bottom-right: image + name + title */
+/* ✅ Overall container for print layout */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 95vh; /* 🔽 Thoda reduce kiya to help fit in one page */
+    page-break-inside: auto;
+    padding-top: 8px; /* 🔽 Layout slightly shifted up */
+    padding-bottom: 0;
+    margin: 0;
+}
+
+/* ✅ Content expands to fill available space */
+.page-content {
+    flex: 1;
+    padding: 0;
+    margin: 0;
+}
+
+/* ✅ Footer container that won't break */
+.report-footer {
+    position: relative;
+    padding-bottom: 0;
+    margin-top: auto;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    page-break-before: auto;
+    break-before: auto;
+}
+
+/* ✅ Signature block - stays with footer */
 .footer-signature-box {
     position: absolute;
     bottom: 40px;
     right: 24px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-end; /* ✅ Image and text aligned to right */
+    text-align: right; /* ✅ Text (name/title) also right aligned */
     gap: 4px;
+    page-break-inside: avoid;
 }
 
 .footer-image {
@@ -35,9 +64,9 @@
     color: #475569;
 }
 
-/* Full-width blue rectangle line */
+/* ✅ Footer line with disclaimer */
 .footer-line {
-    margin-top: 60px; /* 👈 Instead of absolute bottom */
+    margin-top: 16px;
     height: 20px;
     background-color: #1e40af;
     width: 100%;
@@ -45,44 +74,38 @@
     align-items: center;
     justify-content: center;
     page-break-inside: avoid;
+    break-inside: avoid;
 }
-
 
 .footer-disclaimer {
     color: white;
     font-size: 16px;
-    font-weight: 600; /* ⬅️ Thoda aur bold */
+    font-weight: 600;
     text-align: center;
-    letter-spacing: 0.5px; /* ⬅️ (Optional) Thoda spacing better look ke liye */
-    /*text-transform: uppercase;*/ /* ⬅️ (Optional) Professional uppercase look */
+    letter-spacing: 0.5px;
 }
 
-/* ✅ Force print background */
+/* ✅ Print-specific rules */
 @media print {
+    html, body {
+        zoom: 0.94; /* 🔽 Shrinks layout to fit 1-page */
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
     .footer-line {
-        background-color: #000080 !important; /* Strong dark blue */
-        -webkit-print-color-adjust: exact !important; /* For Chrome/Safari */
-        print-color-adjust: exact !important; /* For Firefox */
+        background-color: #000080 !important;
         box-shadow: none !important;
     }
 
     .footer-disclaimer {
         color: white !important;
     }
-}
 
-html, body {
-    height: 100%;
-    margin: 0;
-}
-
-.page-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* 🧱 Full viewport height */
-    page-break-inside: auto; /* 👈 Allow break only between sections, not within */
-}
-
-.page-content {
-    flex: 1; /* 📦 This grows to take all remaining space */
+    .report-footer,
+    .footer-signature-box,
+    .footer-line {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
 }
