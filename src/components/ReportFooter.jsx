@@ -10,8 +10,7 @@ function ReportFooter() {
                     alt="Signature"
                     className="footer-image"
                 />
-                <div className="footer-name">ASHISH KUMAR</div>
-                <div className="footer-title">(DMLT)</div>
+                <div className="footer-name">ASHISH KUMAR(DMLT)</div>
                 <h2></h2>
             </div>
             {/* Full-width footer line with disclaimer */}
