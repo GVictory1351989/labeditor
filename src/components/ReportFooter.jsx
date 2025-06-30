@@ -11,8 +11,7 @@ function ReportFooter() {
                     className="footer-image"
                 />
                 <div className="footer-name">ASHISH KUMAR</div>
-                <div className="footer-title">(DLTP)</div>
-                <h2></h2>
+                <div className="footer-title">(DMLT)</div>
             </div>
             {/* Full-width footer line with disclaimer */}
             <div className="footer-line">
