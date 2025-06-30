@@ -12,6 +12,7 @@ function ReportFooter() {
                 />
                 <div className="footer-name">ASHISH KUMAR</div>
                 <div className="footer-title">(DMLT)</div>
+                <h2></h2>
             </div>
             {/* Full-width footer line with disclaimer */}
             <div className="footer-line">

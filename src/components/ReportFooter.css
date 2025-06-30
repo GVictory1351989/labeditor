@@ -1,7 +1,7 @@
 ﻿.report-footer {
     position: relative;
     margin-top: auto;
-    padding-bottom: 60px; /* space for signature box */
+    padding-bottom: 20px; /* space for signature box */
 }
 
 /* Bottom-right: image + name + title */
