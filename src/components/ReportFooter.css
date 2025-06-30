@@ -1,7 +1,7 @@
 ﻿.report-footer {
     position: relative;
     margin-top: auto;
-    padding-bottom: 20px; /* space for signature box */
+    padding-bottom: 0px; /* space for signature box */
 }
 
 /* Bottom-right: image + name + title */
@@ -36,6 +36,8 @@
 
 /* Full-width blue rectangle line */
 .footer-line {
+    position: absolute;
+    bottom: 60px; /* ← adjust this value as needed */
     height: 20px;
     background-color: #1e40af;
     width: 100%;
